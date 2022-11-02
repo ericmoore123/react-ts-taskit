@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import react, {useState, useEffect, useRef} from 'react';
 import './App.css';
+
+interface Task {
+  name: string;
+  id: number;
+  urgency?: number;
+}
+
+let task1:Task = {name: "Take out trash", id: 1}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+        {task1.name}
+        <br/>
+        {task1.urgency}
     </div>
   );
 }
