@@ -1,23 +1,15 @@
-import react, {useState, useEffect, useRef} from 'react';
+// import react, {useState, useEffect, useRef} from 'react';
 import './App.css';
 
-interface Task {
-  name: string;
-  id: number;
-  urgency?: number;
-}
-
-let task1:Task = {name: "Take out trash", id: 1}
+import DisplayLocations from './components/DisplayLocations';
 
 function App() {
   return (
-    <div className="App">
-      
-        {task1.name}
-        <br/>
-        {task1.urgency}
-    </div>
+    <>
+    <h1>Apollo Application</h1>
+      <DisplayLocations />
+    </>
   );
-}
+};
 
 export default App;
